@@ -71,6 +71,10 @@ public class Topic_03_Selenium_Locator {
 		Assert.assertTrue(driver.findElement(By.className("button")).isDisplayed());
 
 	}
+	/**
+	 * TC_04_name
+	 * Test case cover error input
+	 */
 
 	@Test
 	public void TC_04_Name() {
