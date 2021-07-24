@@ -16,7 +16,6 @@ import org.testng.annotations.AfterClass;
 public class Topic_06_Web_Element_Command {
 
 	WebDriver driver;
-
 	String projectPath = System.getProperty("user.dir");
 
 	@BeforeClass
@@ -28,8 +27,6 @@ public class Topic_06_Web_Element_Command {
 		driver.manage().window().maximize();
 		driver.get("https://automationfc.github.io/basic-form/index.html");
 		driver.navigate().refresh();
-		
-
 	}
 
 	@BeforeMethod
@@ -87,9 +84,9 @@ public class Topic_06_Web_Element_Command {
 			System.out.println("Email Textbox is enabled");
 		} else {
 			System.out.println("Email Textbox is disabled");
-			
+
 		}
-		
+
 		WebElement ageRadioButton = driver.findElement(By.id("over_18"));
 		if (ageRadioButton.isEnabled()) {
 			ageRadioButton.click();
@@ -106,7 +103,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Education TextArea is disabled");
 		}
-		
+
 		WebElement jobDropDownlist = driver.findElement(By.id("job1"));
 		if (jobDropDownlist.isEnabled()) {
 			jobDropDownlist.sendKeys("Manual Testing");
@@ -114,7 +111,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Job Role 1 is disabled");
 		}
-		
+
 		WebElement interrextCheckbox = driver.findElement(By.id("design"));
 		if (interrextCheckbox.isEnabled()) {
 			interrextCheckbox.click();
@@ -122,7 +119,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Interests is disabled");
 		}
-		
+
 		WebElement pwdTextbox = driver.findElement(By.id("password"));
 		if (pwdTextbox.isEnabled()) {
 			pwdTextbox.sendKeys("123456");
@@ -130,7 +127,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Password Textbox is disabled");
 		}
-		
+
 		WebElement ageRadiobuttondis = driver.findElement(By.id("radio-disabled"));
 		if (ageRadiobuttondis.isEnabled()) {
 			ageRadiobuttondis.click();
@@ -139,6 +136,7 @@ public class Topic_06_Web_Element_Command {
 			System.out.println("Age Radiobutton is disabled");
 		}
 	}
+
 	@Test
 	public void TC_03_Check_Element_isSelected() {
 		WebElement interrextCheckbox = driver.findElement(By.id("design"));
@@ -148,7 +146,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Interests is de-selected");
 		}
-		
+
 		WebElement languageCheckbox = driver.findElement(By.id("java"));
 		if (languageCheckbox.isSelected()) {
 			languageCheckbox.click();
@@ -156,8 +154,7 @@ public class Topic_06_Web_Element_Command {
 		} else {
 			System.out.println("Laguage Checkboxis de-selected");
 		}
-		
-		
+
 	}
 
 	@AfterClass
